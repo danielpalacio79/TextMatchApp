@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TextMatchApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="tittle2">
+        Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+</resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,19 +21,21 @@
             android:id="@+id/tittle2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{viewModel.result}"
+            android:text="@string/tittle2"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
             />
-            <!--
-            android:visibility="@{viewModel.labelVisibility}"
-            android:hint="Prueba de texto"-->
-
 
         <EditText
             android:id="@+id/editText1"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:hint="Texto 1"
-             />
+            android:hint="@string/texto_1"
+            android:autofillHints=""
+            tools:ignore="VisualLintTextFieldSize"
+            android:inputType="text"
+            />
         <Space
             android:layout_width="match_parent"
             android:layout_height="64dp" />
@@ -43,8 +44,11 @@
             android:id="@+id/editText2"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:hint="Texto 2"
-             />
+            android:hint="@string/texto_2"
+            android:autofillHints=""
+            tools:ignore="VisualLintTextFieldSize"
+            android:inputType="text"
+            />
 
         <Space
             android:layout_width="match_parent"
@@ -54,7 +58,7 @@
             android:id="@+id/compareButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Comparar"
+            android:text="@string/comparar"
             android:layout_gravity="center"/>
 
         <TextView

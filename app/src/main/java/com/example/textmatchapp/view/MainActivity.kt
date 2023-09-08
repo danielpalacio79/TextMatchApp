@@ -3,8 +3,6 @@ package com.example.textmatchapp.view
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
-import com.example.textmatchapp.R
 import com.example.textmatchapp.databinding.ActivityMainBinding
 import com.example.textmatchapp.viewmodel.CompararTextViewModel
 
@@ -16,16 +14,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.editText1.setText("")
+        binding.editText2.setText("")
 
         binding.compareButton.setOnClickListener {
-            val text1 = binding.editText1.text.toString()
-            val text2 = binding.editText2.text.toString()
+            val texto1 = binding.editText1.text.toString()
+            val texto2 = binding.editText2.text.toString()
 
-            viewModel.compareText(text1, text2)
+            viewModel.compareText(texto1, texto2)
         }
 
-        viewModel.compareResult.observe(this) { result ->
+        viewModel.result.observe(this) { result ->
             binding.resultTextView.text = result
         }
     }

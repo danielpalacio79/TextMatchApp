@@ -33,10 +33,10 @@
             android:id="@+id/editText1"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:hint="@string/texto_1"
             android:autofillHints=""
-            tools:ignore="VisualLintTextFieldSize"
-            android:inputType="text" />
+            android:hint="@string/texto_1"
+            android:inputType="text"
+            tools:ignore="VisualLintTextFieldSize" />
 
         <Space
             android:layout_width="match_parent"
@@ -46,10 +46,10 @@
             android:id="@+id/editText2"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:hint="@string/texto_2"
             android:autofillHints=""
-            tools:ignore="VisualLintTextFieldSize"
-            android:inputType="text" />
+            android:hint="@string/texto_2"
+            android:inputType="text"
+            tools:ignore="VisualLintTextFieldSize" />
 
         <Space
             android:layout_width="match_parent"
@@ -59,8 +59,8 @@
             android:id="@+id/compareButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/comparar"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:text="@string/comparar" />
 
         <TextView
             android:id="@+id/resultTextView"
